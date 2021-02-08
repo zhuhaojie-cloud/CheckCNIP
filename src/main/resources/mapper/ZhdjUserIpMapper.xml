@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhj.test.mapper.ZhdjUserIpMapper">
+    <select id="getZhdjUserIpByTable" resultType="com.zhj.test.entity.ZhdjUserIp">
+        select id,user_name,login_time,ip from ${table} limit ${start},${end}
+    </select>
+
+    <select id="getCountByTable" resultType="Integer">
+        select count(*) from ${table}
+    </select>
+</mapper>
